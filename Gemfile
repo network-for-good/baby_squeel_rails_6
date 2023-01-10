@@ -5,7 +5,7 @@ gemspec
 
 case ENV.fetch('AR', 'latest')
 when 'latest'
-  gem 'activerecord'
+  gem 'activerecord', '6.1.7'
   gem 'sqlite3', '~> 1.4'
 when 'master'
   gem 'activerecord', github: 'rails/rails'
@@ -18,7 +18,7 @@ end
 
 case ENV.fetch('RANSACK', 'latest')
 when 'latest'
-  gem 'ransack', require: false
+  gem 'ransack', github: 'activerecord-hackery/ransack', require: false
 when 'master'
   gem 'ransack', github: 'activerecord-hackery/ransack', require: false
 else
